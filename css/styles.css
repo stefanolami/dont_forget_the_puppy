@@ -1,0 +1,169 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+/* Variables */
+
+:root {
+  --color-win: #78CF82;
+  --color-lose: #D94545;
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .2s ease-in-out;
+}
+
+/* main */
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(var(--vh, 1vh) * 100);
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.game-container {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+}
+
+h2 {
+  margin: 30px 0 10px 0;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+}
+
+
+/* overlay */
+
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  justify-content: center;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  background-image: url('../imgs/puppies2.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.btn__reset {
+  padding: 15px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+.title {
+  color: #FFF;
+}
+
+.start {
+  background-color: var(--color-start);
+}
+
+.win {
+  background-color: var(--color-win);
+}
+
+.lose {
+  background-color: var(--color-lose);
+}
+
+.resetBtn {
+  padding: 15px;
+  margin: 50px auto;
+  background: #FFFFFF;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+
+
+/* game */
+
+
+.header {
+  color: var(--color-start);
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+}
+
+
+/* gallery */
+
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 6px));
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 8px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.imgDiv img {
+  width: 100%;
+  height: auto;
+}
+
+/* .imgDiv {
+  width: 100%;
+  height: auto;
+  background-color: #5b85b7;
+} */
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #5b85b7;
+  border-radius: 5px;
+}
