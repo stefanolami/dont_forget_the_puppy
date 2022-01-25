@@ -142,7 +142,7 @@ ul {
 #gallery {
   display: grid;
   grid-template-columns: repeat(4, calc(25% - 6px));
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 60px);
   grid-gap: 8px;
   width: 90%;
   margin: 20px auto;
@@ -151,6 +151,8 @@ ul {
 .imgDiv img {
   width: 100%;
   height: auto;
+  opacity: 0;
+  object-fit: cover;
 }
 
 /* .imgDiv {
