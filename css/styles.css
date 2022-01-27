@@ -148,10 +148,18 @@ ul {
   margin: 20px auto;
 }
 
-.imgDiv img {
+.img {
   width: 100%;
   height: auto;
   opacity: 0;
+  object-fit: cover;
+}
+
+.shown,
+.found {
+  width: 100%;
+  height: auto;
+  opacity: 1;
   object-fit: cover;
 }
 
