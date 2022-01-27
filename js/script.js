@@ -11,18 +11,17 @@ let missed = 0;
 
 
 function showImages() {
-    for (let i = 0; i < images.lenght; i++) {
-        images[i].style.opacity = 1;
-      }
+    for (let i = 0; i < images.length; i++) {
+        images[i].className = 'img';
+    }
+    fetch('https://dog.ceo/api/breeds/image/random/8')
+    .then(response => response.json())
+    .then(data => createImages(doubleData(data.message)))
 };
 
 
 
 
-
-fetch('https://dog.ceo/api/breeds/image/random/8')
-    .then(response => response.json())
-    .then(data => createImages(doubleData(data.message)))
 
 
 function doubleData(data) {
@@ -96,7 +95,7 @@ function resetHearts() {
     const lostHearts = document.querySelectorAll('.failedTry');
     for (let i = 0; i < lostHearts.length; i++) {
         lostHearts[i].className = 'tries';
-        lostHearts[i].firstChild.src = 'images/liveHeart.png';
+        lostHearts[i].firstChild.src = 'imgs/liveHeart.png';
     }
 }
 
@@ -120,6 +119,7 @@ function showOverlay() {
 
 overlay.addEventListener('click', (e) => {
     if (e.target.className === 'resetBtn') {
+        showImages();
         showGame();
         missed = 0;
         resetHearts();
